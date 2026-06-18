@@ -102,14 +102,6 @@ dtc-competitor-intelligence/
 - **数据可信度体系**：每个数据点标注确认/估算/推断
 - **定价情报深拆**：SKU 级比价、定价策略识别、运费退货成本、折扣节奏
 
-## 依赖的 Marketing Skills（可选增强）
-
-本 skill 深度集成 [marketing-skills](https://github.com/kostja94/marketing-skills)（172 个专业营销 skill）。未安装时核心功能仍可用，但分析深度会受影响。
-
-```bash
-git clone https://github.com/kostja94/marketing-skills.git ~/.agents/skills/marketing-skills
-```
-
 ## 实战案例
 
 | 案例 | 品类 | 核心发现 |
