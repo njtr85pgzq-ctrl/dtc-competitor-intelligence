@@ -1,6 +1,6 @@
 ---
 name: dtc-competitor-intelligence
-description: DTC独立站竞对深度拆解。提供竞对网址，自动执行10阶段全链路分析（流量→受众→渠道→SEO→广告→GMV→SWOT→行动计划），输出可直接分发给执行团队的落地报告。
+description: DTC独立站竞对深度拆解。提供竞对网址，自动执行11阶段全链路分析（流量→受众→渠道→SEO→广告→GMV→定价→技术栈→口碑→SWOT→行动计划），输出可直接分发给执行团队的落地报告。
 argument-hint: [竞对网址] [可选: 我们自己站的背景]
 triggers:
   - "竞对调研"
@@ -9,7 +9,7 @@ triggers:
   - "competitive intelligence"
   - "DTC竞对"
   - "竞对独立站"
-  - "分析一下.*\.com"
+  - "分析一下.*\\.com"
 allowed-tools: Bash(*), Read, Write, Edit, Glob, Grep, WebFetch, WebSearch, Agent, AskUserQuestion, TodoWrite
 ---
 
@@ -35,13 +35,15 @@ Phase 1-2: 流量底盘 + 受众画像（并行搜索）
   ↓
 Phase 3-5: 渠道 + SEO + 广告（深度搜索）
   ↓
-Phase 6-8: GMV + 技术栈 + 口碑（搜索 + 社区扫描）
+Phase 6-7: GMV三角验证 + 定价情报深拆（搜索 + 定价对比）
   ↓
-Phase 9: SWOT聚合（内部收敛，不搜索）
+Phase 8-9: 技术栈扫描 + 品牌口碑（搜索 + 社区扫描）
   ↓
-Phase 10: 行动计划（内部生成，不搜索）
+Phase 10: SWOT聚合（内部收敛，不搜索）
   ↓
-输出完整报告到项目目录
+Phase 11: 行动计划（内部生成，不搜索）
+  ↓
+输出完整报告到输出目录
 ```
 
 ## Phase 0: 接收与范围确认
@@ -144,19 +146,45 @@ Phase 10: 行动计划（内部生成，不搜索）
 **不依赖搜索。用三角验证法内部推算。**
 
 三种方法：
-1. 流量 × 估算转化率 × 估算AOV
+1. 流量 x 估算转化率 x 估算AOV
 2. Trustpilot/评论数反推订单量
 3. 社媒互动反推活跃用户池
 
 参考 references/phase-6-gmv.md 的完整公式。
 
-## Phase 7: 技术栈扫描
+## Phase 7: 定价情报深拆
+
+**目标**：搞清楚竞对的价格体系——锚点定价、折扣策略、运费策略。回答"我在什么价位打他们？"
+
+**搜索策略**：
+```
+并行搜索:
+1. "[品牌名] pricing discount coupon code promotion"
+2. "[品牌名] shipping cost free shipping returns policy"
+3. "[品类] price comparison 2026"
+4. "[品牌名] bundle deal package"
+```
+
+**四层拆解**：
+- 锚点产品定价：Top 5-10 SKU逐个比价
+- 定价策略识别：尾数定价/捆绑/满减/订阅/价格匹配
+- 运费与退货成本：免运费门槛/restocking fee/退货谁出钱
+- 折扣节奏：常规折扣+节日促销+特殊人群折扣
+
+**必须输出**：
+1. "竞对在____价位段，核心价格区间 $____ - $____"
+2. "我们的定价应为竞对的 ____%"
+3. "3个可立即用的价格钩子"
+
+参考 references/phase-7-pricing.md。
+
+## Phase 8: 技术栈扫描
 
 **搜索策略**：BuiltWith推断 + 页面特征判断。
 
-参考 references/phase-7-techstack.md 的检查清单。
+参考 references/phase-8-techstack.md 的检查清单。
 
-## Phase 8: 品牌口碑与用户洞察
+## Phase 9: 品牌口碑与用户洞察
 
 **搜索策略**：
 ```
@@ -167,11 +195,11 @@ Phase 10: 行动计划（内部生成，不搜索）
 ```
 
 **重点挖掘**：用户原话（直接用于广告文案）、高频差评词（产品/服务短板）、客服/售后体验。
-参考 references/phase-8-reputation.md。
+参考 references/phase-9-reputation.md。
 
-## Phase 9: SWOT聚合
+## Phase 10: SWOT聚合
 
-**不搜索。收敛前8个Phase的所有发现。**
+**不搜索。收敛前9个Phase的所有发现。**
 
 输出格式：
 ```
@@ -185,9 +213,9 @@ T 威胁（他们对我们构成的）
 可建壁垒: [立即/3个月/观望]
 ```
 
-参考 references/phase-9-swot.md。
+参考 references/phase-10-swot.md。
 
-## Phase 10: 行动计划
+## Phase 11: 行动计划
 
 **不搜索。这是调研的真正交付物。**
 
@@ -200,39 +228,62 @@ T 威胁（他们对我们构成的）
 
 每一行必须回答：预期带来多少流量/转化/GMV？如果做不到，止损线在哪？
 
-参考 references/phase-10-action-plan.md 的模板。
+参考 references/phase-11-action-plan.md 的模板。
 
 ## Marketing Skills 集成层
 
-本 skill 深度集成 [marketing-skills](https://github.com/kostja94/marketing-skills) (172个专业营销skill)。竞调分析不再只是"表面观察"，而是调用专业级 skill 做平台级深拆。
+本 skill 深度集成 [marketing-skills](https://github.com/kostja94/marketing-skills) (172个专业营销skill)。每个 Phase 有三级调用策略：
 
-**集成模式**：每个 Phase 分析时，references 文件中列出了该 Phase 应调用的 marketing skill。调用方式为使用 Skill 工具调用对应 skill。
+| 级别 | 说明 | 示例 |
+|------|------|------|
+| **P0 必调** | 不调用分析质量有本质差距 | keyword-research, backlink-analysis, pricing-strategy |
+| **P1 选调** | 时间够就做，跳过不影响结论 | schema, open-graph, canonical |
+| **跳过** | 该 marketing skill 未安装则跳过 | — |
 
 **核心集成点**：
 
-| Phase | 调用 Skill 类别 | 升级效果 |
-|-------|---------------|---------|
-| Phase 3 渠道审计 | `channels/*`, `strategies/brand/*` | 从"人工判断"→ 每个渠道按专业框架评估 |
-| Phase 4 SEO深拆 | `seo/*` (20+ skills) | 从"搜一下SEO情况"→ 技术SEO/On-page/Off-page/内容四维专业审计 |
-| Phase 5 广告逆向 | `paid-ads/*` (12 skills) | 从"有没有投广告"→ 分平台逆向素材/人群/漏斗/预算 |
-| Phase 8 口碑 | `strategies/brand/*` | 从"看评分"→ 品牌舆情监控+社区声量+Sentiment分析 |
-| Phase 10 行动计划 | `strategies/launch/*`, `pages/*`, `analytics/*` | 从"列任务清单"→ 每个动作调用执行skill，输出可直接落地的方案 |
+| Phase | P0 必调 Skill | P1 选调 Skill |
+|-------|--------------|--------------|
+| Phase 3 渠道审计 | `channels/owned/email-marketing`, `channels/partnerships/affiliate-marketing` | `channels/partnerships/influencer-marketing`, `strategies/brand/integrated-marketing` |
+| Phase 4 SEO深拆 | `seo/content/keyword-research`, `seo/off-page/backlink-analysis`, `seo/content/competitor-research` | `seo/on-page/*`, `seo/technical/*` |
+| Phase 5 广告逆向 | `paid-ads/platforms/google-ads`, `paid-ads/platforms/meta-ads` | `paid-ads/platforms/tiktok-ads`, `paid-ads/platforms/youtube-ads` |
+| Phase 7 定价拆解 | `strategies/commercial/pricing/pricing-strategy`, `strategies/commercial/pricing/discount-marketing` | `pages/marketing/pricing`, `pages/legal/refund` |
+| Phase 9 口碑 | `strategies/brand/brand-monitoring` | `strategies/brand/branding`, `channels/community/community-forum` |
+| Phase 11 行动 | `strategies/launch/gtm`, `channels/owned/email-marketing`, `pages/marketing/landing-page` | `analytics/*`, `pages/*` |
 
 **调用原则**：
-- Phase 3/4/5 分析阶段：**必须调用**对应的 marketing skill 做深度拆解，不能只靠 WebSearch 的表面结果
-- Phase 10 执行阶段：对 P0 动作**必须调用**对应的执行 skill 输出具体方案
-- 如果某个 marketing skill 未被安装（目录不存在），跳过该 skill 但不影响整体流程
+- P0 必调 skill 在对应 Phase 中必须调用，数量控制在 2-3 个以内
+- P1 选调 skill 由 AI 根据时间判断是否调用
+- 如果某个 marketing skill 未被安装，跳过但标注"未安装对应skill，分析深度受限"
 
 ## 报告输出
 
-完整报告写入 `d:/projects/dtc-competitor-intelligence/examples/[竞对名称]-竞对拆解-[日期].md`。
+### Executive Summary（必须放在报告最前面）
+
+报告第一屏必须是 30 秒速读卡片，任何老板都能直接看：
+
+```
+## Executive Summary
+
+[竞对名称] | 年GMV ~$X | [核心获客模式]
+一句话: [最重要的战略判断]
+Top 3 立刻做的事:
+  1. [动作] — [抄/打] — [预期效果]
+  2. [动作] — [抄/打] — [预期效果]
+  3. [动作] — [抄/打] — [预期效果]
+```
+
+### 完整报告
+
+写入 `~/dtc-reports/[竞对名称]-竞对拆解-[日期].md`。目录不存在则自动创建。
 
 使用 references/report-template.md 的结构。
 
 ## 执行约束
 
 - Phase 1-2的搜索可以并行
-- Phase 3-5的搜索可以并行  
+- Phase 3-5的搜索可以并行
+- Phase 6-7的搜索可以并行
 - 一次最多发起4个并行WebSearch
 - 每次搜索后检查结果质量，信息不足时换个词搜一次，再不回就算了
 - 标注数据可信度：确认 / 估算 / 推断
