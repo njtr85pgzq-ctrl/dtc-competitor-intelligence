@@ -54,3 +54,22 @@
 2. 付费广告渠道是蓝海
 3. 我们可以用广告快速起量，形成先发优势
 4. 但同时也要验证：为什么他们不投？是品类ROI天然低，还是他们不会？
+
+## 可调用的 Marketing Skills
+
+广告逆向工程时——不只是搜"有没有投"，而是调用专业 ad skill 做平台级拆解：
+
+| 平台 | 调用的 Skill | 逆向什么 |
+|------|-------------|---------|
+| Google Ads | `paid-ads/platforms/google-ads` | Search/Display/Shopping/PMax 投放结构、关键词覆盖、出价策略推断 |
+| Meta Ads | `paid-ads/platforms/meta-ads` | FB/IG 在投广告、受众定向、素材类型、落地页 |
+| TikTok Ads | `paid-ads/platforms/tiktok-ads` | TT在投素材、创意角度、投放规模 |
+| YouTube Ads | `paid-ads/platforms/youtube-ads` | YT在投视频广告、In-stream/Discovery |
+| LinkedIn Ads | `paid-ads/platforms/linkedin-ads` | B2B品类是否投LinkedIn |
+| Reddit Ads | `paid-ads/platforms/reddit-ads` | Reddit社区广告投放 |
+| Display | `paid-ads/formats/display-ads` | GDN/程序化Display投放 |
+| Native | `paid-ads/formats/native-ads` | 原生广告/内容推荐广告 |
+| CTV | `paid-ads/formats/ctv-ads` | 联网电视广告（品牌向） |
+| 广告策略 | `strategies/commercial/paid-ads` | 整体广告策略判断：漏斗完整度、预算分配、渠道组合 |
+| 落地页 | `pages/marketing/landing-page` | 广告→落地页匹配度、转化设计 |
+| 定价 | `strategies/commercial/pricing/pricing-strategy` | 广告中的定价策略和折扣模式 |

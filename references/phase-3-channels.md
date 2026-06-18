@@ -63,3 +63,18 @@
 
 如果竞对是海外公司：广告投放效率上可以快速超越。
 如果竞对是国内出海：拼执行力而非方向。
+
+## 可调用的 Marketing Skills
+
+分析每个渠道时，调用对应的 skill 做深度拆解：
+
+| 渠道 | 调用的 Skill | 做什么 |
+|------|-------------|--------|
+| Email | `channels/owned/email-marketing` | 反推竞对邮件策略：注册弹窗→欢迎流→弃购流→复购流 |
+| Social | `channels/community/community-forum` | 检查竞对在FB Group/Reddit/Discord的社区存在 |
+| Referral | `channels/partnerships/affiliate-marketing` | 竞对有联盟计划吗？佣金结构？ |
+| Referral | `channels/partnerships/referral-program` | 竞对有推荐返利吗？ |
+| Influencer | `channels/partnerships/influencer-marketing` | 竞对做KOL/达人合作吗？ |
+| PR | `channels/partnerships/public-relations` | 竞对有媒体报道/PR吗？ |
+| Distribution | `channels/distribution/distribution-channels` | 竞对的多渠道分发策略 |
+| 整体 | `strategies/brand/integrated-marketing` | 竞对是多渠道协同还是单一渠道？

@@ -55,3 +55,16 @@
 
 → 如果我们做到"____ + ____"，就能直接吃掉____
 ```
+
+## 可调用的 Marketing Skills
+
+口碑分析不只是"看好评差评"，调用专项 skill 做系统化评估：
+
+| 分析维度 | 调用的 Skill | 做什么 |
+|---------|-------------|--------|
+| 品牌监控 | `strategies/brand/brand-monitoring` | 竞对全网品牌提及、舆情Sentiment |
+| 品牌保护 | `strategies/brand/brand-protection` | 竞对是否注册品牌/商标，仿品/黑帽情况 |
+| 品牌定位 | `strategies/brand/branding` | 竞对品牌定位、差异化信息 |
+| 社区运营 | `channels/community/community-forum` | 竞对在Reddit/FB Group/Discord的社区声量 |
+| UGC | `channels/owned/employee-generated-content` | 竞对用户自发内容量（UGC/口碑传播） |
+| 内容营销 | `strategies/brand/content-marketing` | 竞对品牌内容营销的整体评估 |

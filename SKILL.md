@@ -202,6 +202,27 @@ T 威胁（他们对我们构成的）
 
 参考 references/phase-10-action-plan.md 的模板。
 
+## Marketing Skills 集成层
+
+本 skill 深度集成 [marketing-skills](https://github.com/kostja94/marketing-skills) (172个专业营销skill)。竞调分析不再只是"表面观察"，而是调用专业级 skill 做平台级深拆。
+
+**集成模式**：每个 Phase 分析时，references 文件中列出了该 Phase 应调用的 marketing skill。调用方式为使用 Skill 工具调用对应 skill。
+
+**核心集成点**：
+
+| Phase | 调用 Skill 类别 | 升级效果 |
+|-------|---------------|---------|
+| Phase 3 渠道审计 | `channels/*`, `strategies/brand/*` | 从"人工判断"→ 每个渠道按专业框架评估 |
+| Phase 4 SEO深拆 | `seo/*` (20+ skills) | 从"搜一下SEO情况"→ 技术SEO/On-page/Off-page/内容四维专业审计 |
+| Phase 5 广告逆向 | `paid-ads/*` (12 skills) | 从"有没有投广告"→ 分平台逆向素材/人群/漏斗/预算 |
+| Phase 8 口碑 | `strategies/brand/*` | 从"看评分"→ 品牌舆情监控+社区声量+Sentiment分析 |
+| Phase 10 行动计划 | `strategies/launch/*`, `pages/*`, `analytics/*` | 从"列任务清单"→ 每个动作调用执行skill，输出可直接落地的方案 |
+
+**调用原则**：
+- Phase 3/4/5 分析阶段：**必须调用**对应的 marketing skill 做深度拆解，不能只靠 WebSearch 的表面结果
+- Phase 10 执行阶段：对 P0 动作**必须调用**对应的执行 skill 输出具体方案
+- 如果某个 marketing skill 未被安装（目录不存在），跳过该 skill 但不影响整体流程
+
 ## 报告输出
 
 完整报告写入 `d:/projects/dtc-competitor-intelligence/examples/[竞对名称]-竞对拆解-[日期].md`。
