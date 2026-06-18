@@ -1,6 +1,9 @@
 ---
 name: dtc-competitor-intelligence
-description: DTC独立站竞对深度拆解。提供竞对网址，自动执行11阶段全链路分析（流量→受众→渠道→SEO→广告→GMV→定价→技术栈→口碑→SWOT→行动计划），输出可直接分发给执行团队的落地报告。
+description: >
+  DTC independent website competitor deep-dive analysis. Provide a competitor URL and automatically execute 11-phase full-funnel research: traffic → audience → channels → SEO → paid ads → GMV triangulation → pricing intelligence → tech stack → brand reputation → SWOT → 90-day action plan. Output a production-ready report that can be directly distributed to execution teams.
+  Trigger when user wants to analyze, research, or benchmark a DTC/e-commerce competitor website. Use for competitor research, competitive analysis, DTC brand teardown, e-commerce competitive intelligence, or when user provides a .com URL to analyze.
+  In Chinese: DTC独立站竞对深度拆解。提供竞对网址，自动执行11阶段全链路分析。
 argument-hint: [竞对网址] [可选: 我们自己站的背景]
 triggers:
   - "竞对调研"

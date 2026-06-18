@@ -1,0 +1,11 @@
+# Codex (OpenAI) — Agent metadata
+# Reference: https://developers.openai.com/codex/skills
+
+name: DTC Competitor Intelligence
+description: >
+  Deep-dive DTC/e-commerce competitor analysis. 11-phase research from traffic
+  to 90-day action plan. Provide a competitor URL to trigger.
+
+# Allow Codex to auto-invoke based on description matching
+policy:
+  allow_implicit_invocation: true
