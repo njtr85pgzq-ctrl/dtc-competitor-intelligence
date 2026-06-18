@@ -1,20 +1,20 @@
 # DME Superstore 竞对深度拆解报告
 
-**调研日期**: 2026-06-15
+**调研日期**: 2026-06-18
 **竞对网址**: dmesuperstore.com
-**调研方法**: DTC竞对独立站深度拆解框架 v1
-**数据来源**: SimilarWeb (rank only), Trustpilot, Google搜索, Judge.me, GridinSoft, Scam-Detector, BuiltWith推断
+**调研方法**: DTC竞对独立站深度拆解框架 v2（集成 marketing-skills 172个专业skill）
+**数据来源**: Trustpilot, BuiltWith, WebSearch, GridinSoft, Scam-Detector, Klaviyo App Store
 
-⚠️ **数据质量声明**: 该站全球排名约 #1,634,916，属于极小体量站点，SimilarWeb/SEMrush/Ahrefs 均无公开结构化数据。以下部分指标基于公开碎片信息 + 行业benchmark推导，标注 **"估算"** 的为推导值。
+> **v2 升级说明**: 本次分析集成了 SEO/Paid Ads/Channels/Content/Brand 五大类 marketing skill，从"表面搜索"升级为"专业框架级审计"。关键发现较 v1 有重大修正。
 
 ---
 
 ## 调研三问（先行锚定）
 
-| 核心问题 | 初步判断 |
-|---------|---------|
-| 它靠什么长期稳定获客？ | **价格战 + SEO内容长尾**（博客正在建内容矩阵）+ 口碑自然增长 |
-| 哪些做法我们能照抄？ | 内容SEO策略、价格锚定策略、Trustpilot信任背书、Blog话题方向 |
+| 核心问题 | 判断 |
+|---------|------|
+| 它靠什么长期稳定获客？ | **低价策略 + Klaviyo邮件自动化 + SEO内容 + Trustpilot信任资产** |
+| 哪些做法我们能照抄？ | Klaviyo邮件流体系、内容SEO策略、价格锚定、GOVX军人折扣 |
 | 先做什么、怎么做、做到什么程度？ | 见 Phase 10 行动计划 |
 
 ---
@@ -25,29 +25,27 @@
 
 | 指标 | 数值 | 来源/可信度 |
 |------|------|-----------|
-| 全球排名 | ~#1,634,916 | GridinSoft（可信） |
-| 月访问量（估算） | **5K - 20K** | 基于排名反推（估算） |
-| 增长趋势 | ⚠️ 无数据 | 站点太新，MoM数据缺失 |
-| 域名注册 | 2024年10月 | GoDaddy WHOIS（确认） |
+| 全球排名 | ~#744,631 | BuiltWith Top 1M Sites（可信） |
+| 月访问量（估算） | **15K - 50K** | 排名反推 + BuiltWith收入交叉验证（估算） |
+| 域名注册 | 2024年10月 | WHOIS（确认） |
 | 站点年龄 | ~20个月 | — |
-| 设备分布 | 未知 | SimilarWeb无数据 |
-| 新访/回访比 | 未知 | — |
-| 页面/访问（估算） | 2-4页 | 品类特性推断 |
-| 跳出率（估算） | 50-70% | 品类+建站时间推断 |
-| Top流量国家（估算） | 美国 > 加拿大 > 英国 | Trustpilot多区域部署推断 |
+| 产品数量 | 500+ | BuiltWith（可信） |
+| 设备分布 | 推测移动端 > 桌面端 | Shopify Veena Theme 优化 |
+| 流量趋势 | ⚠️ 无公开数据 | SimilarWeb/SEMrush无数据 |
+| Top流量国家（推断） | 美国 > 加拿大 > 英国 > 澳大利亚 > 新西兰 | Trustpilot多国分站部署 |
 
 ### 关键假设
 
-> **桌面端与移动端并重 | 站是唯一交易终点（无App/无第三方平台店铺） | 核心成交完全发生在站内**
+> **移动端偏重 | 纯独立站交易终点 | 核心成交发生在站内**
 
 **推断逻辑**:
-- DME品类用户偏中老年，桌面端占比应高于普通电商
-- 搜索结果中未发现该品牌的Amazon/eBay店铺，流量模型是纯独立站
-- Shopify建站，无App线索
+- Shopify Veena Theme 为移动端优化，DME品类的照护者（子女）购物行为偏移动端
+- 搜索结果中未发现Amazon/eBay店铺，流量模型是纯DTC独立站
+- 多仓分布（网站提及"Multiple distribution centers"），覆盖全美
 
 ### 一句话定性
 
-> **这是一个靠低价切入DME市场、正在用SEO博客建立内容护城河、但运营执行（物流/客服）尚不稳定的初创独立站。**
+> **这是一个由医疗行业老手（20年+经验）在加州创立、靠低价+邮件自动化+Klaviyo精准营销驱动的DME独立站。运营基本功（物流/客服一致性）仍是短板，但邮件营销能力远超预期。**
 
 ---
 
@@ -57,230 +55,233 @@
 
 | 维度 | 推断值 | 依据 |
 |------|--------|------|
-| 年龄 | **45-75岁** | DME核心消费群：老年人+其照护者 |
-| 年龄细分 | 45-60（子女为父母购买）、60-75（自购） | 品类逻辑 |
-| 性别 | **女性55-60%**（购买决策者），男性40-45%（使用者） | 照护者多为女性，使用者偏男性 |
-| 地域 | **美国中西部/南部 > 东西海岸** | 老龄人口分布+退休州 |
-| 收入 | **中等偏低**（价格敏感型） | Trustpilot评论反复提"比别家便宜$100+" |
-| 兴趣标签 | 医疗健康 / 家庭照护 / 退休生活 / 省钱 / Medicare/保险报销 | — |
-| 购买动机 | **功能性需求 > 品牌忠诚**（谁的性价比高买谁） | — |
+| 年龄 | **45-75岁**（双峰分布） | DME品类数据 + 45-60岁子女照护者 + 60-75岁自购者 |
+| 性别 | 女性55-60%（购买决策者），男性45-50%（使用者） | 照护者多为女性，退伍军人群体偏男性 |
+| 地域 | 美国中西部/南部 > 东西海岸 | 退休州分布 + GOVX军人折扣暗示退伍军人密集区域 |
+| 收入 | **中等偏低**（价格敏感型） | Trustpilot用户反馈"比别家便宜$100+"、对restocking fee敏感 |
+| 职业标签 | 退伍军人/退休人员/照护者/残障人士 | GOVX折扣/Turstpilot用户画像 |
+| 购买动机 | **功能性需求驱动 > 品牌忠诚**（性价比为王） | 用户评论核心词：价格、运费、速度 |
 
 ### 决策链路一句话
 
-> **45-75岁美国人（或其子女照护者），Google搜索具体品类词 → 比价（价格敏感） → 看Trustpilot评论验证可信度 → 下单（关注免运费+退换政策） → 复购低（多为一次性大件采购）**
+> **45-75岁美国人（或其子女照护者），Google搜索品类词 → 比价（价格为核心决策因素）→ Trustpilot验证 → Klaviyo邮件折扣触发首单 → 下单（关注免运费+退货政策）→ 复购低（一次性大件采购为主）**
 
 ### 决策链路分阶段表
 
 | 阶段 | 平台/触点 | DME Superstore做什么 | 用户行为 | 我们的机会 |
 |------|----------|---------------------|---------|-----------|
-| 需求触发 | Google搜索 | SEO博客（品类指南类） | 搜"best mobility scooter" / "electric wheelchair reviews" | ✅ 直接竞争品类词 |
-| 种草 | YouTube | ❌ 未发现 | 看评测视频 | ✅ 可以抄 |
-| 比价 | Google/比价站 | 低价策略 | 跨站比价 | ✅ 我们定价策略需匹配 |
-| 信任验证 | Trustpilot | 4.0/5分，26条评论 | 看差评+公司回复 | ✅ 积累Trustpilot评论 |
-| 下单 | 独立站 | Shopify+Judge.me | 直接下单 | ✅ 优化站内体验 |
-| 售后 | Email/电话 | 客服不一致 | 等待发货 | ✅ 比他们做得更稳定 |
+| 需求触发 | Google搜索 | SEO博客（品类指南类） | 搜"best mobility scooter" / "electric wheelchair reviews" | 直接竞争品类词 |
+| 种草 | Facebook/Instagram | Meta Verified主页 | 看社媒内容 | 补充YouTube/Reddit/TikTok |
+| 比价 | Google/比价站 | 价格匹配保证 + 低价策略 | 跨站比价 | 价格不低于他们 |
+| 转化钩子 | Email弹窗 | 10%注册折扣 + Klaviyo自动化流 | 留邮箱→收折扣码→下单 | 设计更有力的Lead Magnet |
+| 信任验证 | Trustpilot | 4.0/5分，110条评论 | 看差评+公司回复 | 积累Trustpilot评论 |
+| 下单 | 独立站 | Shopify+Judge.me | 直接下单 | 优化结账体验 |
+| 售后 | Email/Klaviyo | 购买后自动化流 | 等发货/收follow-up | 主动物流通知+客服SLA |
 
 ---
 
 ## Phase 3: 渠道构成与质量审计
 
-### 渠道估算（基于站点阶段推断）
+> **调用 skills**: `channels/owned/email-marketing`, `channels/partnerships/affiliate-marketing`, `channels/community/community-forum`, `strategies/brand/integrated-marketing`
 
-DME Superstore作为一个20个月的初创站，渠道结构推演如下：
+### 渠道估算（基于新数据修正）
 
 | 渠道 | 流量占比（估算） | 质量评估 | 增长趋势 | 竞对投入 | 我们的差距 | 可抄指数 |
 |------|----------------|---------|---------|---------|-----------|---------|
-| Direct (直接) | 15-25% | 低（品牌认知弱） | 缓慢增长 | 低 | 小 | ⭐⭐ |
-| Organic Search (自然搜索) | 40-55% | **高（主要流量来源）** | 上升中 | 中（博客在建） | 可快速追上 | ⭐⭐⭐⭐⭐ |
-| Paid Search (付费搜索) | 5-10% | 未知 | 未知 | 极低或无 | 我们可以领先 | ⭐⭐⭐ |
-| Social (社媒) | <3% | **极低** | 无明显增长 | **几乎没有** | 我们可以碾压 | ⭐⭐⭐⭐⭐ |
-| Display (展示广告) | <2% | 极低 | 无 | 无 | — | ⭐ |
-| Email (邮件) | 5-10% | 低（仅10%注册折扣触发） | 缓慢 | 极低（无成熟邮件流） | 我们可以碾压 | ⭐⭐⭐⭐⭐ |
-| Referral (引荐) | 5-10% | 中 | 缓慢 | 低 | 小 | ⭐⭐ |
+| Direct (直接) | 15-20% | 中 | 缓慢增长 | 低 | 小 | ⭐⭐ |
+| Organic Search (自然搜索) | 40-50% | **高（主要流量来源）** | 上升中 | 中（博客在建） | 可快速追上 | ⭐⭐⭐⭐⭐ |
+| Paid Search (付费搜索) | 5-10% | 低 | 未知 | 极低或无 | 我们可以领先 | ⭐⭐⭐⭐ |
+| Social (社媒) | 5-10% | 中（Meta Verified + FB/IG存在） | 缓慢 | 低 | 我们可以碾压 | ⭐⭐⭐⭐ |
+| Display (展示广告) | <3% | 极低 | 无 | 无 | — | ⭐ |
+| Email (邮件) | **15-25%** | **高（Klaviyo自动化流）** | 上升中 | **高（自己说这是"most rewarding campaigns"）** | ⚠️ 需要追赶 | ⭐⭐⭐⭐⭐ |
+| Referral (引荐) | 5-10% | 中（GOVX军人折扣渠道） | 缓慢 | 中 | 小 | ⭐⭐⭐ |
+
+### ⚠️ v2 重大修正
+
+**邮件营销**：v1 判断为"极弱"，v2 发现他们用 Klaviyo 做了深度购买后自动化流，且自称这是他们"回报最高的营销活动"。邮件营销不是他们的弱点——是我们需要**追赶**的点。
+
+**社媒**：v1 认为"零存在感"，v2 发现他们有 Meta Verified 账号和 FB/IG 活跃页面。存在但不是强项。
 
 ### 渠道审计结论
 
 ```
 ✅ 对方强项（护城河级别）:
-1. SEO内容 - 博客已开始建内容矩阵（品类指南类文章）
-2. 价格优势 - "比别家便宜$100+" 是核心获客钩子
-3. Trustpilot信任资产 - 虽然仅26条，但4.0分已经很不错
+1. Klaviyo邮件自动化 — 购买后trigger流，交叉销售+复购提醒，自称"回报最高"
+2. SEO内容 — 博客方向对（品类教育+买家指南+How-to）
+3. 价格优势 — "比别家便宜$100+" + 价格匹配保证
+4. Trustpilot信任资产 — 110条评论，4.0/5分
+5. GOVX军人折扣渠道 — 精准触达退伍军人群体
 
 ❌ 对方弱项（我们的突破口）:
-1. 社媒 = 零存在感（FB/IG/TT/YT/Reddit均无）
-2. 邮件营销 = 仅做了10%注册折扣，无复购流/弃购流/教育流
-3. 付费广告 = 几乎没做
+1. 物流执行不稳定 — 承诺1-4天实际2周+，最大用户痛点
+2. 退货政策糟糕 — 15-20% restocking fee，用户强烈不满
+3. 客服响应不一致 — Taylor/Alex很棒，但有人10封邮件无回复
+4. 付费广告 = 零 — 完全没投Google/Meta广告
+5. YouTube/Reddit/TikTok = 零 — 视频+社区完全没做
 
 🟡 对方没做的（蓝海）:
-1. YouTube视频评测（DME品类视频种草转化极高）
-2. 社区运营（Facebook Group / Reddit r/wheelchair / r/disability）
-3. 弃购挽回邮件和SMS
-4. 分期付款/BNPL（Klarna / Afterpay）
-5. Medicare/保险报销指导内容（高搜索量低竞争）
+1. YouTube视频评测 — DME品类视频种草转化极高
+2. Facebook照护者社区 — 残障群体/照护者天然需要社区
+3. BNPL分期付款 — 高客单价的刚需
+4. Medicare/保险报销指导内容 — 高搜索量低竞争
+5. Google Shopping广告 — 高意向搜索流量未被拦截
+6. Reddit社区贡献 — r/wheelchair / r/disability / r/caregivers
 ```
-
-### 品牌增长模式判断
-
-DME Superstore 属于 **海外草根卖家打法**：靠低价+自然流量慢慢涨，不投广告，不做社媒，内容SEO开始起步但还很初级。本质上是 **一个运营还不太专业的初创店**。
 
 ---
 
 ## Phase 4: SEO与内容策略深拆
 
-### 4.1 已知数据
+> **调用 skills**: `seo/content/competitor-research`, `seo/content/keyword-research`, `seo/off-page/backlink-analysis`, `seo/on-page/title`, `seo/on-page/schema`, `seo/technical/crawlability`, `seo/technical/core-web-vitals`
 
-| 维度 | 现状 | 判断 |
-|------|------|------|
-| 博客 | ✅ 有，至少5篇已知文章 | 刚起步，量少 |
-| 文章类型 | 品类教育类 | 方向对（教育搜索意图） |
-| 文章质量 | 未知（无法访问） | — |
-| 关键词覆盖 | 极弱（排名~1.6M） | 品牌词都未必排名第一 |
-| 外链 | ⚠️ 几乎为零 | 无任何搜索结果中出现外链 |
-| DR (Domain Rating) | 估算 <10 | 新站正常水平 |
+### SEO审计矩阵
 
-### 4.2 已知博客文章
+| 维度 | 现状 | 评分 | 详细 |
+|------|------|------|------|
+| 关键词覆盖 | 弱 | ⭐⭐ | 排名~744K，大概率仅品牌词+少量品类词有排名 |
+| 页面类型构成 | 中等 | ⭐⭐⭐ | 500+产品页 + 博客 + 品类页，结构完整 |
+| 内容集群策略 | 初级 | ⭐⭐ | 博客刚起步，每篇独立，无Pillar-Cluster结构 |
+| 外链画像 | 极弱 | ⭐ | 几乎为零，新站正常水平 |
+| DR (Domain Rating) | <10 | ⭐ | 20个月新站，无外链积累 |
+| On-page SEO | 初级 | ⭐⭐ | Shopify标准模板，推测未做深度优化 |
+| Schema Markup | 初级 | ⭐⭐ | Shopify默认Schema，大概率无自定义 |
+| 技术SEO | 中等 | ⭐⭐⭐ | Shopify平台基础好，但无深度优化 |
+| Core Web Vitals | 未知 | — | Veena Theme性能需实测 |
+| 移动端适配 | ✅ | ⭐⭐⭐⭐ | Veena Theme为移动端优化 |
 
-```
-1. Foldable vs. Non-Foldable Electric Wheelchairs
-   → 教育类 | 搜索意图: "foldable electric wheelchair" / "folding vs non folding wheelchair"
-
-2. Ultimate Wheelchair Carbon Fiber Buyer's Guide  
-   → 买家指南类 | 搜索意图: "carbon fiber wheelchair" / "wheelchair carbon fiber guide"
-
-3. How to Use a Shower Chair Safely and Confidently
-   → How-to类 | 搜索意图: "how to use shower chair"
-
-4. Your Guide to Choosing and Using a Hoyer Lift Sling
-   → 买家指南类 | 搜索意图: "hoyer lift sling guide"
-
-5. A Caregiver's Guide to Perineal Skin Cleansers
-   → 照护者教育类 | 搜索意图: "perineal skin cleanser caregiver"
-```
-
-### 4.3 内容策略判断
-
-- 方向对：教育类+买家指南+How-to，覆盖搜索意图三角
-- 量太少：5篇文章在DME品类几乎等于没有
-- 无集群结构：未发现Pillar Page + Cluster的结构化策略
-- 无内链策略：大概率没有
-- **结论：他们开了个好头但尚未建起真正的SEO护城河，我们完全可以在6个月内追上**
-
-### 4.4 我们可抄的SEO策略
+### 已知博客文章
 
 ```
-1. 他们的博客话题方向可以直接复用（5篇文章→我们扩展到50篇）
-2. 补充他们没覆盖的高搜索量词：
-   → "Medicare coverage for mobility scooters"
-   → "best electric wheelchair for elderly"
-   → "mobility scooter vs power wheelchair"
-   → "how to get insurance to pay for lift chair"
-3. 建Pillar Page + Cluster结构（他们没有做的）
-4. 外链获取渠道：行业媒体评测、残疾人权益组织合作、Reddit社区贡献
+1. Foldable vs. Non-Foldable Electric Wheelchairs → 对比评测类
+2. Ultimate Wheelchair Carbon Fiber Buyer's Guide → 买家指南类
+3. How to Use a Shower Chair Safely and Confidently → How-to类
+4. Your Guide to Choosing and Using a Hoyer Lift Sling → 买家指南类
+5. A Caregiver's Guide to Perineal Skin Cleansers → 照护者教育类
 ```
+
+### SEO差距分析（我们 vs 他们）
+
+| 竞争维度 | 他们 | 我们目标 | 超越策略 |
+|---------|------|---------|---------|
+| 博客数量 | ~5篇 | 50篇（90天） | 他们5篇文章就能拿到流量→我们50篇能拿10倍 |
+| 关键词策略 | 无意识（随缘写） | 数据驱动（关键词研究先行） | 用keyword-research做词库，反推内容日历 |
+| 内容集群 | 无 | Pillar Page + Cluster | 每品类1个Pillar + 10篇Cluster，内链闭环 |
+| 外链建设 | 零 | 首月10条高质量 | HARO/行业媒体评测/Reddit社区贡献 |
+| Schema | Shopify默认 | 自定义Product/Article/FAQ Schema | Rich Snippet抢占SERP |
+| E-E-A-T | 无 | Medicare内容建权威 | 医学审核+作者资质页+引用权威来源 |
 
 ---
 
 ## Phase 5: 广告打法逆向工程
 
-### 5.1 广告情报
+> **调用 skills**: `paid-ads/platforms/google-ads`, `paid-ads/platforms/meta-ads`, `paid-ads/platforms/youtube-ads`, `strategies/commercial/paid-ads`
 
-| 情报维度 | 发现 |
-|----------|------|
-| Meta (FB/IG) Ads | ❌ 未发现任何在投广告 |
-| TikTok Ads | ❌ 未发现 |
-| Google Ads | ❌ 未发现显著投放（可能极小量品牌词） |
-| Ad Library活跃度 | **零或极低** |
+### 广告平台扫描
 
-### 5.2 广告策略结论
+| 平台 | 在投状态 | 证据 |
+|------|---------|------|
+| Google Ads | ❌ 未发现显著投放 | 所有关键词搜索无广告痕迹 |
+| Google Shopping | ❌ 未发现 | 产品Feed无广告展示 |
+| Meta (FB/IG) Ads | ⚠️ 可能有极小量品牌词保护 | 有Meta Verified，但Ad Library搜不到创意 |
+| TikTok Ads | ❌ 未发现 | — |
+| YouTube Ads | ❌ 未发现 | — |
+| LinkedIn Ads | ❌ 未发现 | B2B属性弱 |
+| 重定向(Remarketing) | ❌ 未发现 | 无Facebook Pixel活跃信号 |
+
+### 广告策略结论
 
 ```
-对方广告成熟度: 新手/未投入
+对方广告成熟度: 未投入/新手
+
 判断依据:
-- 所有广告渠道搜索结果均为空
-- 可能在跑极小量品牌词Google Ads（保护品牌搜索），但量可忽略不计
-- 作为价格导向的初创站，投广告ROI为正的概率高，但他们没做
-→ 说明他们要么不会投、要么不想投、要么资金有限
+- 所有广告渠道搜索结果为空或极弱
+- 虽然他们有Klaviyo（说明懂自动化营销），但广告投放是完全空白
+- 可能原因: ① 预算有限（初创团队）② 不懂投放 ③ DME品类合规顾虑（需验证）
+- ⚠️ 注意：他们懂邮件自动化但不懂付费广告 → 
+  说明团队有营销意识但缺广告投手或投放经验
 
 对方广告弱点:
-1. 完全没跑付费社媒广告（DME品类FB广告效果很好）
-2. 没跑Google Shopping（高意向搜索流量）
-3. 没做重定向（Remarketing）
+1. 没有拦截品类高意向搜索词（Google Shopping = 完全空白）
+2. 没有做重定向（巨大的转化率提升机会）
+3. 没有在YouTube/Reddit等DME高转化渠道投广告
 
-我们可以直接抄/优化的:
-1. Google Shopping广告 → 直接拿高意向搜索流量
-2. FB广告 → 45+人群精准定向 + 照护者人群
-3. 重定向广告 → 竞对完全没做，转化率可提升20%+
+我们的机会:
+1. Google Shopping → 直接拿"mobility scooter"等高意向搜索流量，竞对完全没防御
+2. Meta Ads → 45+人群 + 照护者精准定向，竞对没做
+3. 重定向 → 竞对完全没做，转化率可提升20%+
+4. ⚠️ 前提：先验证DME品类广告政策（FDA/Google Ads医疗广告合规）
 ```
+
+### 广告合规风险（DME品类特殊）
+
+DME品类在Google/Meta投放有医疗广告限制，需要：
+- Google: LegitScript认证（处方类）/ 非处方类相对宽松
+- Meta: 医疗产品广告政策审核，禁止过度承诺"治疗效果"
+- ⚠️ **必须优先验证合规**，否则广告账户可能被封
 
 ---
 
-## Phase 6: 转化漏斗与GMV测算
+## Phase 6: 转化漏斗与GMV三角验证
 
-### 6.1 漏斗估算
+### 漏斗估算（修正后）
 
 ```
-假设月流量: 15K（取5K-20K中位估算）
-
-流量 15K
-  ↓ 跳出率 60%
-到达产品页 6K
-  ↓ PDP转化率 3-5%
-加购 180-300
-  ↓ 加购率→结账率 60%
-启动结账 108-180
+假设月流量: 30K（取15K-50K中位，基于#744K排名调整）
+  ↓ 跳出率 55%
+到达产品页 13.5K
+  ↓ PDP转化率 2-4%（品类平均）
+加购 270-540
+  ↓ 加购率→结账率 65%
+启动结账 175-350
   ↓ 结账完成率 70%
-完成支付 75-126 单/月
+完成支付 122-245 单/月
 ```
 
-### 6.2 GMV三角验证
+### GMV三角验证
 
 **方法一：流量反推**
 ```
-月订单: 75-126单
+月订单: 120-250单
 AOV: $300（小配件）到 $2,500（电动轮椅/代步车）
-加权AOV估算: $1,200（假设中高价品类为主）
-月GMV: $90K - $150K
-年GMV: $1.0M - $1.8M
+加权AOV估算: $1,000-1,500
+月GMV: $120K - $375K
+年GMV: $1.4M - $4.5M
+最可能值: ~$1.5M-2.5M/年
 ```
 
 **方法二：Trustpilot评论反推**
 ```
-26条Trustpilot评论 / 20个月 = 1.3条/月
-行业留评率: 1-3%（DME品类）
-月订单估算: 43 - 130单
-与流量反推基本吻合 ✅
+110条Trustpilot评论 / 20个月 = 5.5条/月
+行业留评率: 1-3%（DME品类用户留评意愿较高）
+月订单反推: 180 - 550单
+⚠️ Klaviyo邮件自动化可能提升了留评率 → 取保守区间
 ```
 
-**方法三：Judge.me评论反推**
+**方法三：BuiltWith收入反推**
 ```
-6条Judge.me评论 / 站点存续
-行业Shopify产品留评率: 2-5%
-订单量级: 120-300（历史总订单）
-月均: 6-15单（早期）
-→ 可能早期订单少，近期加速
-```
-
-### 6.3 GMV结论
-
-```
-估算月GMV区间: $50K - $150K
-估算年GMV区间: $600K - $1.8M
-最可能值: ~$1M/年
-
-🔑 这是一个微型DTC玩家，不是大对手。
-但正因如此，他们证明了：DME品类，小站也能跑出一年百万美金。
+BuiltWith估算销售: ~$94K SGD ≈ $70K USD
+⚠️ 但BuiltWith数据通常偏低（仅捕捉部分交易信号）
+实际GMV可能为BuiltWith数据的3-5倍
+→ 年GMV $200K - $350K (BuiltWith保守)
+→ 结合流量/评论反推：$1.5M-2.5M/年 更合理
 ```
 
-### 6.4 关键指标
+### GMV结论
 
-| 指标 | 估算值 | 行业Benchmark |
-|------|--------|-------------|
-| 月流量 | 10K-20K | — |
-| 转化率 | 0.5-1.0% | DME电商平均 1-2% |
-| AOV | $1,000-1,500 | 品类中等 |
-| 月订单 | 50-150 | — |
-| 年GMV | $600K-1.8M | — |
-| 复购率 | 极低（一次性大件） | 行业特点 |
+```
+估算月GMV区间: $100K - $300K
+估算年GMV区间: $1.2M - $3.6M
+最可能值: ~$2M/年 ← v2上调（v1为~$1M）
+
+上调原因:
+1. BuiltWith 500+产品 → 供应深度远超预期
+2. Klaviyo成熟邮件流 → 转化效率高于普通初创站
+3. Trustpilot 110条评论 → 销售量远高于最初26条的判断
+4. 多仓全美配送 → 说明已有一定规模
+
+🔑 这是一个正在快速增长的DTC玩家，年收入已在百万美金级别。
+   团队懂营销（Klaviyo自动化），但运营执行（物流/客服）跟不上增速。
+```
 
 ---
 
@@ -288,74 +289,88 @@ AOV: $300（小配件）到 $2,500（电动轮椅/代步车）
 
 | 维度 | 检测结果 | 来源 |
 |------|---------|------|
-| 建站平台 | **Shopify** | 确认（Scam-Detector + 页面特征） |
-| 产品评论 | **Judge.me** | 确认（AppNavigator） |
-| 信任评分 | **Trustpilot** (3.8-4.1/5) | 确认 |
-| Email工具 | 推测 Klaviyo 或 Shopify Email | 未确认 |
-| 弹窗/邮件捕获 | 有（10% email signup popup） | Trustpilot评论提及 |
-| 支付方式 | Shopify Payments + PayPal（推测） | 标准Shopify配置 |
+| 建站平台 | **Shopify** | BuiltWith确认 |
+| 主题 | **Veena Theme** | BuiltWith确认 |
+| 产品评论 | **Judge.me** | AppNavigator确认 |
+| Email/SMS | **Klaviyo**（⚠️ v2重大修正） | Klaviyo App Store用户评价 |
+| 标签管理 | **Google Tag Manager** | 技术栈扫描 |
+| 信任评分 | **Trustpilot** (3.7-4.1/5, ~110条) | Trustpilot确认 |
+| Meta验证 | **Meta Verified** | 页面特征 |
+| 支付方式 | Shopify Payments + PayPal + 分期选项（推测） | 标准Shopify配置 |
 | 分期/BNPL | ❌ 未提及 | — |
-| 客服 | Email + Phone（无Live Chat证据） | — |
-| 物流 | 多仓分布（承诺免费US Shipping） | 网站提及 |
+| 折扣系统 | GOVX军人折扣（第三方集成） | 网站提及 |
+| 客服 | 电话 888-376-1658 + Email（7天/周） | 网站+Trustpilot |
+| 价格策略 | 价格匹配保证（Price Match Guarantee） | 网站提及 |
+| 物流 | 多仓分布，免费US Shipping | 网站提及 |
 | SSL | ✅ HTTPS有效 | GridinSoft确认 |
-| 域名注册商 | GoDaddy | WHOIS确认 |
-| 主机位置 | 加拿大（Shopify CDN） | WHOIS |
+| 域名注册商 | GoDaddy | WHOIS |
+| 总部 | Palm Desert, California | Trustpilot |
+
+### 技术栈评估
+
+```
+Shopify + Veena Theme + Klaviyo + Judge.me → 标准DTC技术栈
+Klaviyo的存在说明他们在邮件自动化上投入了心思
+但缺少:
+  ❌ Live Chat工具（Tidio/Gorgias等）
+  ❌ BNPL（Klarna/Afterpay/Affirm）
+  ❌ SMS营销（Klaviyo支持但不确定是否在用）
+  ❌ A/B测试工具
+  ❌ 高级Analytics（GA4可能已装但未见深度使用痕迹）
+```
 
 ---
 
 ## Phase 8: 品牌口碑与用户洞察
 
-### 8.1 Trustpilot 评分画像
+> **调用 skills**: `strategies/brand/brand-monitoring`, `strategies/brand/branding`
 
-**总体: 3.8-4.1/5 | ~26条评论 | "Good" - "Great"**
+### Trustpilot 评分画像
 
-**高频好评关键词**:
-- "competitive pricing" / "saved $100+" — 价格优势
-- "fast shipping" / "delivered in 2-3 days" — 当物流正常时体验好
-- "knowledgeable customer service" / "Taylor" — 个别客服表现突出
-- "well-packaged" — 产品包装质量OK
-- "free shipping" — 免费送货
+**总体: 3.7-4.1/5 | ~110条评论（2026年6月数据）**
 
-**高频差评关键词**:
-- "shipping delays" / "took weeks" — 物流是最大痛点
-- "no response" / "couldn't reach support" — 客服响应不一致
-- "restocking fee" / "had to pay return shipping" — 退货政策糟糕
-- "wrong item" / "wrong color" — 发货准确性问题
-- "box crushed" / "damaged" — 部分物流损坏
+### 好评词云（高频）
 
-### 8.2 用户原话（可直接用于广告/文案）
+| 关键词 | 频次 | 用户原话 |
+|--------|------|---------|
+| 价格/省钱 | ⭐⭐⭐⭐⭐ | "I found the exact same scooter battery for $100 less here" |
+| 物流快 | ⭐⭐⭐⭐ | "shipped so I received packages within 24 hours" |
+| Taylor | ⭐⭐⭐⭐ | "Taylor was super helpful and knowledgeable" |
+| 产品质量 | ⭐⭐⭐ | "The wheelchair exceeded my expectations for the price" |
+| 免费送货 | ⭐⭐⭐ | "Free shipping within the US" |
 
-> "I found the exact same scooter battery for $100 less here. Arrived fast and works perfectly."
-> — Trustpilot 5-star review
+### 差评词云（高频）
 
-> "They shipped quickly and the wheelchair exceeded my expectations for the price."
-> — Trustpilot 5-star review
+| 关键词 | 频次 | 用户原话 |
+|--------|------|---------|
+| 物流延误 | ⭐⭐⭐⭐⭐ | "Order said 3-4 days, ended up being almost 2 weeks" |
+| 客服不回复 | ⭐⭐⭐⭐ | "10 emails and 2 voicemails later my father finally got a walker" |
+| Restocking Fee | ⭐⭐⭐ | "15-20% restocking fee + return shipping... I live on social security, this hurts!" |
+| 发错货 | ⭐⭐ | "It wasn't the one he wanted / wrong color" |
+| 退款慢 | ⭐⭐ | "I have NOT received my order. It's been almost 2 months!!!" |
 
-> "Ordered a bed that was supposed to arrive in 1-4 days. It's been 2 weeks and no one will return my emails or calls."
-> — Trustpilot 1-star review
+### 用户情绪总结
 
-> "Taylor was super helpful and knowledgeable. He helped me pick the right wheelchair for my needs."
-> — Trustpilot 5-star review (员工名"Taylor"多次出现)
+```
+用户爱他们: 因为便宜 + 当物流正常时体验很好（Taylor代表的最佳客服体验）
+用户恨他们: 因为物流不可靠 + 退货惩罚性政策 + 客服响应不一致
+用户不知道他们: 品牌认知基本靠Google搜索和Trustpilot，无品牌溢价
 
-### 8.3 客服/售后评估
+→ 核心机会:
+  如果我们做到"价格跟他差不多 + 物流比他可靠 + 退货比他友好"，
+  就能直接吃掉他的Trustpilot口碑流量。
+  再加一个"比他们更快的客服" → 竞争优势翻倍。
+```
 
-| 维度 | 评级 | 说明 |
+### 品牌定位评估
+
+| 维度 | 评分 | 说明 |
 |------|------|------|
-| 响应速度 | ⚠️ 不一致 | 有的秒回，有的2周不回 |
-| 差评回复率 | 40-60% | Trustpilot多区域统计 |
-| 退货体验 | ❌ 差 | 15-20% restocking fee + 自付退货运费 |
-| 专业性 | ✅ 有亮点 | Taylor等个别员工能力强 |
-| 售后支持 | ❌ 差 | 有用户被转介给第三方技师，技师不回电话 |
-
-### 8.4 用户情绪总结
-
-```
-用户爱他们: 因为便宜（这是压倒性的原因）
-用户恨他们: 因为物流不可靠+退货麻烦（运营基本功不行）
-
-→ 如果我们做到"价格跟他差不多 + 物流比他可靠"，
-   就能直接吃掉他的口碑流量。
-```
+| 品牌认知度 | ⭐⭐ | 靠SEO+Trustpilot而非品牌搜索 |
+| 品牌差异化 | ⭐⭐ | "便宜"不是品牌，是价格策略 |
+| 品牌信任度 | ⭐⭐⭐ | Trustpilot 4.0分及格，但差评伤害大 |
+| 品牌忠诚度 | ⭐ | 无品牌社区，无复购机制 |
+| NPS（推测） | 20-40 | 好评多但差评伤害大，临界Promoter |
 
 ---
 
@@ -364,145 +379,165 @@ AOV: $300（小配件）到 $2,500（电动轮椅/代步车）
 ### 竞对SWOT（相对于我们）
 
 ```
-S 优势（他们做得好的）:
-  1. 价格锚定成功 — 用户心智中"这家便宜"已形成
-  2. SEO内容方向对 — 品类教育类博客已起步
-  3. Trustpilot基础分不错 — 4.0分 / 26条评论
+S 优势（他们做得好的 → 要学/避）:
+  1. 价格锚定成功 — "比别家便宜$100+"心智已形成 + 价格匹配保证
+  2. ⚠️ Klaviyo邮件自动化成熟 — 购买后trigger流是他们自己说的"回报最高"渠道
+  3. Trustpilot 110条/4.0分 — 信任资产已建立
+  4. 产品深度500+SKU — 一站式DME超市定位
+  5. GOVX军人折扣 — 精准触达退伍军人高价值人群
+  6. SEO方向对 — 博客覆盖品类教育+买家指南+How-to
 
 W 劣势（他们做不好/没做的 — 我们的突破口）:
-  1. 物流执行不稳定 — 1-4天承诺 vs 实际2周+，最大用户痛点
-  2. 退货政策差 — 15-20% restocking fee，用户怨气大
-  3. 社媒=零 — FB/IG/TT/YT/Reddit全无存在感
-  4. 邮件营销=零 — 只有10%注册折扣，无任何自动化流
-  5. 付费广告=零 — 完全没投
-  6. 客服响应不一致 — 有的是Taylor很棒，有的完全不理人
-  7. 站点年龄太新 — 20个月，SEO权重极低
+  1. 物流执行不稳定 — 1-4天 vs 实际2周+，最大用户痛点
+  2. 退货政策惩罚性 — 15-20% restocking fee + 自付退货运费
+  3. 客服响应不一致 — Taylor/Alex是好员工，但系统有问题
+  4. 付费广告=零 — Google Shopping/FB Ads全空白
+  5. 视频内容=零 — YouTube/TikTok无存在感
+  6. 社媒不活跃 — 有Meta账号但内容量少
+  7. 站点年轻（20个月）— SEO权重极低，DR<10
 
 O 机会（市场给了但他们没抓住的）:
-  1. YouTube视频评测 — DME品类视频种草转化极高，他们没做
-  2. Medicare/保险报销指导内容 — 高搜索量、低竞争、高转化
-  3. Facebook Group社区运营 — 残障群体/照护者天然需要社区
-  4. BNPL分期付款 — 高客单价品类的刚需，他们没有
-  5. Google Shopping广告 — 高意向搜索流量未被竞对拦截
-  6. Reddit社区贡献 — r/wheelchair / r/disability / r/caregivers
+  1. YouTube视频评测 — DME品类视频种草转化极高
+  2. Google Shopping — 高意向搜索流量完全未被拦截
+  3. Medicare/保险报销内容 — 高搜索量低竞争
+  4. Facebook照护者社区 — 残障群体天然需要社区
+  5. BNPL分期 — 高客单价刚需，他们没有
+  6. SMS营销 — Klaviyo支持但似乎未启用
+  7. Live Chat — 竞对只有Email+电话
 
 T 威胁（他们对我们构成的）:
-  1. 已有Trustpilot基础 — 虽然只有26条，但积累需要时间
-  2. 已有回头客/口碑推荐 — 低价+免运费在目标人群中传播
-  3. 已有SEO博客起步 — 如果持续写，12个月后可能形成壁垒
+  1. Trustpilot 110条评论 — 我们需要从0开始追
+  2. Klaviyo自动化流 — 他们邮件营销已经跑通了
+  3. 价格匹配保证 — 如果我们降价，他们能match
+  4. 500+产品深度 — 选品能力已经是壁垒
+  5. 先发者的SEO积累 — 虽然弱，但20个月>0个月
 ```
 
 ### 策略分类
 
 ```
-✅ 可抄策略（立即，因为我们也要做）:
-  - 博客SEO内容矩阵（但要比他们做得多、做得深）
-  - Trustpilot评论积累（从头开始做）
-  - 价格竞争力（至少不低于他们）
-  - 10% email signup折扣
+✅ 可抄策略（立即）:
+  - Klaviyo邮件自动化流（欢迎流/弃购流/购买后教育流/交叉销售流）
+  - 博客SEO内容矩阵（品类教育+买家指南+How-to三类全覆盖）
+  - Trustpilot评论积累（从头开始做，每单邀请）
+  - 价格竞争力（不低于他们，但不需要最低）
+  - GOVX/军人折扣（可复用模式）
 
 🥊 可打策略（立即，打他们弱点）:
-  - 物流体验碾压（准时发货+包裹追踪+主动通知）
-  - 退货政策碾压（免费退货/更长窗口）
-  - 客服碾压（Live Chat + 24h响应SLA）
+  - 物流体验碾压（准时率SLA + 主动状态通知 + 实时的Tracking）
+  - 退货政策碾压（免费退货/更长窗口/无restocking fee → 营销放大）
+  - 客服碾压（Live Chat + 24h响应SLA + 公开Response Time承诺）
+  - Google Shopping广告（他们没做 → 直接拿搜索流量）
 
 ⏳ 可建壁垒（他们大概率追不上）:
-  - YouTube内容矩阵
-  - Facebook照护者社区
-  - Medicare/保险报销内容 (他们是竞对，我们是助手)
-  - 邮件自动化全流程（欢迎流/教育流/弃购流/复购流）
+  - YouTube内容矩阵（评测+开箱+使用指南）
+  - Medicare/保险报销专属内容（权威信息门户定位）
+  - Facebook照护者社区（UGC驱动的内容飞轮）
+  - SMS+Email双渠道自动化（他们只有Email）
 ```
 
 ---
 
 ## Phase 10: 行动计划
 
+> **调用 skills**: `strategies/launch/gtm`, `strategies/launch/cold-start`, `strategies/commercial/pricing/pricing-strategy`, `channels/owned/email-marketing`, `paid-ads/platforms/google-ads`, `paid-ads/platforms/meta-ads`, `seo/content/keyword-research`, `seo/content/content-strategy`
+
 ### 90天作战计划
 
-| # | 优先级 | 动作 | 抄/打 | 竞对依据 | 怎么做 | KPI | 所需资源 | ROI预估 |
-|---|--------|------|-------|---------|--------|-----|---------|---------|
-| 1 | **P0** | 建站+基础SEO | 抄+超 | 他们已验证SEO有效 | Shopify建站，SEO标题/描述/URL/Schema | 上线时至少50个SEO页面 | 开发+内容写手 | 基础动作，必做 |
-| 2 | **P0** | 核心品类页+产品页 | 抄+超 | 他们的品类结构可直接参考 | 按搜索量排序建品类页，价格对标调低5-10% | 前10个品类页上线 | 选品+内容 | 中 |
-| 3 | **P0** | Trustpilot冷启动 | 抄 | 他们有26条，我们必须追 | 前50单每单邀请留评，私域种子用户优先 | 30天内10条+真实评论 | 客服+邮件 | 高 |
-| 4 | **P0** | 邮件基础流搭建 | 打 | 他们基本没做 | 欢迎流3封 + 弃购流2封 + 注册折扣弹窗 | 30天内上线3条自动化流 | Klaviyo+1人 | **最高** |
-| 5 | **P1** | 博客SEO内容矩阵 | 超 | 他们5篇，我们50篇 | 品类指南+How-to+Medicare专题+Pillar Page | 90天50篇文章 | 内容写手2人 | 高（长期复利） |
-| 6 | **P1** | Google Shopping广告 | 打 | 他们没投 | Feed优化+出价策略，“mobility scooter”等高意向词 | 30天内ROAS≥3 | Google Ads预算$3K/mo | 高 |
-| 7 | **P1** | FB/IG社媒冷启动 | 打 | 他们完全没做 | 用户故事+产品展示+照护者教育内容 | 90天1K粉丝+日均互动20+ | 社媒运营+内容 | 中 |
-| 8 | **P1** | 退货政策优化 | 打 | 他们15-20% restocking fee是痛点 | 30天免费退货（覆盖竞对劣势，营销放大） | 退货率<5% | 物流+客服 | 中（品牌） |
-| 9 | **P2** | YouTube视频内容 | 建壁垒 | 他们没做 | 品类型测评+开箱+使用指南（手机拍摄即可起步） | 90天20个视频 | 内容+产品样品 | 高（长期） |
-| 10 | **P2** | Medicare/保险专题内容 | 建壁垒 | 他们只写了一篇caregiver | 创建专题landing page: "Does Medicare Cover Mobility Scooters?" | 3篇Pillar内容 | 内容写手+法律审核 | 极高 |
-| 11 | **P2** | FB Group社区 | 建壁垒 | 他们没做 | 创建"Caregivers & Mobility Community" Group | 90天500成员 | 社区运营 | 高（长期） |
-| 12 | **P3** | BNPL分期接入 | 打 | 他们没做 | Klarna/Afterpay接入 | 分期订单占比>15% | 技术+合同 | 中 |
+| # | 优先级 | 动作 | 抄/打 | 竞对依据 | 怎么做 | KPI | 所需资源 | ROI |
+|---|--------|------|-------|---------|--------|-----|---------|-----|
+| 1 | **P0** | 建站+SEO基础设施 | 抄+超 | Shopify+Veena已验证 | Shopify建站，Title/Desc/Schema/URL全部按seo/on-page/*标准优化 | 上线时50+SEO优化页面 | 开发+SEO | 基础动作 |
+| 2 | **P0** | Klaviyo邮件自动化搭建 | 抄+超 | 他们自己说邮件是"回报最高"渠道 | 欢迎流3封+弃购流2封+购买后教育流3封+交叉销售流2封 | 30天上线10封自动化邮件 | Klaviyo+1人 | **极高** |
+| 3 | **P0** | Trustpilot冷启动 | 抄 | 他们110条，从0追 | 前100单每单邀请留评，首月目标20条 | 30天20条+真实评论 | 客服+邮件自动化 | 高 |
+| 4 | **P0** | 物流+退货体验优化 | 打 | 他们最大用户痛点 | 准时发货SLA+主动Tracking通知+30天免费退货+无restocking fee | 物流准时率>95%+退货率<5% | 物流+客服+3PL | 高(品牌) |
+| 5 | **P1** | 关键词研究+内容日历 | 超 | 他们5篇随缘写→我们50篇数据驱动 | 用keyword-research建词库，Pillar-Cluster结构，每品类1个Pillar+10篇Cluster | 90天50篇文章 | 内容写手x2+SEO工具 | 高(长期) |
+| 6 | **P1** | Google Shopping广告 | 打 | 他们完全没投 | Feed优化+高意向词出价，"mobility scooter"等品类词拦截 | ROAS≥3（30天） | Google Ads $3K/mo | 高 |
+| 7 | **P1** | Meta Ads冷启动 | 打 | 他们有Meta Verified但不投广告 | 45+人群+子女照护者精准定向+低价引流测试 | 首月CPA<$30 | FB Ads $2K/mo | 中 |
+| 8 | **P1** | 客服Live Chat上线 | 打 | 他们客服10封邮件不回 | Tidio/Gorgias Live Chat + 24h响应SLA + 主动公开Average Response Time | 响应时间<2h+CSAT>90% | 客服工具+1人 | 高(信任) |
+| 9 | **P2** | YouTube内容矩阵 | 建壁垒 | 他们没做 | 品类型测评+开箱+使用指南，手机拍摄即可起步 | 90天20个视频 | 内容+产品样品 | 高(长期) |
+| 10 | **P2** | Medicare/保险专题内容 | 建壁垒 | 他们没做 | "Does Medicare Cover Mobility Scooters?"等Pillar Content | 3篇Pillar+配套Cluster | 内容写手+医学审核 | **极高** |
+| 11 | **P2** | FB Group照护者社区 | 建壁垒 | 他们没做 | "Caregivers & Mobility Community" Group + 每周话题 | 90天500成员 | 社区运营 | 高(长期) |
+| 12 | **P2** | SMS营销启动 | 打 | Klaviyo支持但似乎未启用 | 弃购SMS+物流更新SMS+复购提醒SMS | SMS转化率>5% | Klaviyo SMS | 中 |
+| 13 | **P3** | BNPL分期接入 | 打 | 他们没做 | Klarna/Afterpay接入 → 高客单价刚需 | 分期订单占比>15% | 技术+合同 | 中 |
 
 ### 资源总览
 
 ```
 团队配置（初期）:
 - 站长/运营负责人 × 1
-- 内容写手 × 1-2（SEO文章+社媒+邮件文案）
-- 客服 × 1（兼Trustpilot管理）
+- 内容写手 × 1-2（SEO文章+邮件文案+社媒）
+- 客服 × 1（兼Trustpilot+Live Chat管理）
 - 广告投手 × 0.5（可外包或站长兼）
 
 预算（月）:
 - 内容创作: $2K-4K
-- Google Ads: $2K-5K（从小额测试起）
-- FB Ads: $1K-3K（第二个月开始）
-- 工具订阅（Klaviyo/SEO/设计）: $500
-- 总计: $5K-13K/月
+- Google Ads: $2K-4K（小额测试→放量）
+- Meta Ads: $1K-3K（第二个月开始）
+- Klaviyo: $100-300
+- 工具（SEO/设计/Live Chat）: $500
+- 总计: $5K-12K/月
 
 预期产出（90天）:
-- 月流量: 目标20K-50K
-- 月订单: 目标100-300
-- 月GMV: 目标$100K-350K
-- 年化GMV: 目标$1.2M-4.2M
+- 月流量: 20K-50K
+- 月订单: 100-300
+- 月GMV: $100K-350K
+- 年化GMV: $1.2M-4.2M
 ```
 
 ### 风险与止损线
 
 | 风险 | 止损线 | 应对 |
 |------|--------|------|
-| SEO内容3个月无流量 | 50篇文章后月自然流量<5K → 暂停扩量，诊断文章质量和关键词策略 | 检查关键词是否有搜索量，文章是否被索引 |
-| Google Shopping ROAS<2 | 连续30天ROAS<2 → 暂停，排查Feed/Landing Page/出价 | 检查落地页匹配度，优化Feed标题 |
-| 物流不稳定（复制竞对问题） | 差评中物流相关>30% → 立即换仓/换3PL | 跟竞对一样的问题我们必须避开 |
-| Trustpilot差评失控 | 评分<3.5 → 暂停邀请评论，先修产品/服务 | 先做好再要评论 |
-| 竞对降价反应 | 他们降至低于我们 → 不跟价格战，打服务和内容差异 | 用户选我们不是因为最便宜 |
+| DME广告合规问题 | 如Google/Meta拒审 → 立即转内容+SEO为主力获客 | 提前验证LegitScript/FDA合规要求 |
+| SEO内容3个月无流量 | 50篇文章后月自然流量<5K → 诊断关键词质量 | 确保词有搜索量再写 |
+| Google Shopping ROAS<2 | 连续30天ROAS<2 → 暂停，排查Feed/Landing Page | 检查品类词是否适合Shopping |
+| 物流不稳定 | 差评中物流相关>30% → 立即换仓/3PL | 跟竞对一样的坑绝对不能踩 |
+| Trustpilot差评 | 评分<3.5 → 暂停邀请评论，先修产品/服务 | 先做好再要评论 |
+| 竞对跟进降价 | 他们降至我们之下 → 不跟价格战，打服务+内容差异化 | 用户选我们不是因为最便宜 |
+| Klaviyo邮件进Promotion Tab | 打开率<15% → 调整主题行+发送时间+分段 | A/B测试优化 |
 
 ---
 
-## 附录: 竞对核心信息速查卡
+## 附录: 竞对速查卡
 
 ```
-━━━━━━━━━━━━━━━━━━━━━━━
-DME Superstore 速查
-━━━━━━━━━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+DME Superstore 速查（v2 修正版）
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 网站:     dmesuperstore.com
 成立:     2024年10月（~20个月）
-平台:     Shopify
-排名:     #1,634,916（全球）
-月流量:   5K-20K（估算）
-月GMV:    $50K-150K（估算）
-年GMV:    ~$1M（估算）
-员工:     推测1-5人
+总部:     Palm Desert, CA
+平台:     Shopify (Veena Theme)
+排名:     #744,631 (BuiltWith Top 1M)
+产品:     500+ SKU
+月流量:   15K-50K（估算）
+月GMV:    $100K-300K（估算）
+年GMV:    ~$2M（估算）
+团队:     推测3-8人
 
 强项:
-  ✅ 价格优势（比竞对便宜$100+）
-  ✅ SEO内容方向对（博客已起步）
-  ✅ Trustpilot 4.0/5
+  ✅ 价格优势（比竞对便宜$100+ + 价格匹配保证）
+  ✅ Klaviyo邮件自动化（自称"回报最高"渠道）
+  ✅ Trustpilot 4.0/5, ~110条
+  ✅ 500+产品深度
+  ✅ GOVX军人折扣渠道
+  ✅ SEO方向对（博客已起步）
 
 弱项:
-  ❌ 社媒=零
-  ❌ 广告=零
-  ❌ 邮件=极弱
-  ❌ 物流不稳定
-  ❌ 退货政策差
-  ❌ 客服不一致
+  ❌ 物流不稳定（1-4天 vs 实际2周+）
+  ❌ 退货政策惩罚性（15-20% restocking fee）
+  ❌ 客服不一致（好员工有，但系统不行）
+  ❌ 付费广告=零
+  ❌ YouTube/Reddit/TikTok=零
+  ❌ SEO权重极低（DR<10）
 
 致命弱点:
-  💀 运营基本功不行 → 
-     我们只要做到"同价+好服务"就能赢
-━━━━━━━━━━━━━━━━━━━━━━━
+  💀 运营基本功跟不上增长速度 →
+     我们只要做到"同价+好服务+好退货政策"
+     就能在这个品类建立品牌溢价
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ```
 
 ---
 
-*报告生成时间: 2026-06-15 | 工具: DTC竞对独立站深度拆解框架 v1 | 下次刷新建议: 2026-09-15*
+*报告生成: 2026-06-18 | 框架: DTC竞对深度拆解 v2（集成 marketing-skills 172 skill） | 下次刷新: 2026-09-18*
