@@ -5,7 +5,15 @@ name: DTC Competitor Intelligence
 description: >
   Deep-dive DTC/e-commerce competitor analysis. 11-phase research from traffic
   to 90-day action plan. Provide a competitor URL to trigger.
+  Trigger when user wants competitor research, competitive analysis, DTC brand
+  teardown, or e-commerce competitive intelligence.
+  For general market research (not competitor-specific), use industry-report instead.
+  For single-channel analysis (SEO only, ads only), use relevant marketing skills directly.
 
 # Allow Codex to auto-invoke based on description matching
 policy:
   allow_implicit_invocation: true
+
+metadata:
+  version: 3.1.0
+  phases: 11

@@ -92,6 +92,7 @@ dtc-competitor-intelligence/
 | **v1** | 原始方法论文档，10 Phase，纯人读 |
 | **v2** | 转为 AI skill 插件，集成 172 个 marketing-skills，P0/P1 分级调用 |
 | **v3** | 新增 Phase 7 定价情报、Executive Summary、跨平台 AgentSkills 标准兼容 |
+| **v3.1** | 对标 marketing-skills 模式优化：`metadata.version`、描述反触发、Scope 边界、Related Skills 整合、"When invoking" 调用约定 |
 
 ## 关键设计
 
@@ -101,6 +102,10 @@ dtc-competitor-intelligence/
 - **功利性原则**：每个 Phase 要求 AI 回答"所以呢？对我有什么用？"
 - **数据可信度体系**：每个数据点标注确认/估算/推断
 - **定价情报深拆**：SKU 级比价、定价策略识别、运费退货成本、折扣节奏
+- **Scope 边界**：明确"做什么/不做什么"——竞对拆解 ≠ 行业报告 ≠ 单渠道分析，避免误触发
+- **Related Skills 整合**：统一关联 marketing-skills（172 skill）+ 内部 16 个 references + 4 个 SOP 附录
+- **描述反触发**：description 中写明 "For X, use Y instead"，防止非竞调场景误触发
+- **版本追踪**：`metadata.version` 语义化版本控制，对标 marketing-skills 标准
 
 ## 实战案例
 
